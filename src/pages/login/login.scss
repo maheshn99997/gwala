@@ -1,0 +1,112 @@
+page-login {
+    .background{
+        // background: url('../assets/bg.png') no-repeat center center fixed;
+        // background-size: cover;
+        background-color: #005498;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .submit-btn {
+        background: #0DCC7B; 
+        border-radius: 100px; 
+        margin: 0 auto;
+        margin-top: 48px; 
+        max-width:60%
+    }
+
+    .scroll-content {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    ion-card.card{
+        box-shadow: none;
+        background: rgba(133,146,152,0.5);
+        border-radius: 5px;
+        height: auto;
+    }
+    a,p,
+    ion-card-header.card-header{
+        color: #fff;
+    }
+    .list>.item-block:first-child {
+        border:medium none;
+
+    }
+    .item{
+        margin-bottom: 10px;
+        background: transparent;
+        box-shadow: none;
+        border:medium none;
+        .text-input,{
+            color: #fff;
+            border-bottom: 1px solid #fff; 
+            padding:5px; 
+        }
+        *:-moz-placeholder{
+            color: #fff !important;
+        }
+        *:-ms-input-placeholder{
+            color: #fff !important;
+        }
+        *::-webkit-input-placeholder{
+            color: #fff !important;
+        }
+        input::-moz-placeholder{
+            color: #fff !important;
+        }
+        input:-moz-placeholder{
+            color: #fff !important;
+        }
+    }
+
+    .text-input-md {
+        background: transparent;
+        border-bottom: 1px solid #fff; 
+        
+        margin: 0; 
+        width: 100%; 
+    }
+    page-login ion-card.card{border-radius: 0px;}
+    .card-header-md{
+        padding: 0;
+        margin-top: 20px;
+    }
+    ion-card img{
+        display: block;
+        width: 65%;
+        margin: 0 auto;
+    }
+    .item .text-input{
+        font-size: 14px;
+    }
+
+    .versionText{
+        top: 0;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        color: #000000;
+        font-weight: bold;
+    }
+}
+
+.inpt-brdr,.inpt-brdr .item-inner{box-shadow: none !important;border-color: transparent !important;}
+
+
+.loginscreen ion-card.card{background:none!important}
+.weltitle p{color:#ffffff;font-size:28px;font-weight:300;margin-bottom: 40px}
+.loginscreen .card-content-md{padding: 0 10px!important}
+.loginscreen .submit-btn{text-transform:none;background-color:#fff;color: #2480ae;max-width:100%!important;padding: 25px 0px;border: solid 1px #fff;font-size:16px;margin-top:25px}
+.loginscreen .submit-btn:hover{background: #fff;color:#2480ae}
+.loginscreen .create{background:transparent;color:#fff}
+.loginscreen .moreop a{margin-top:18px;color:#fff;font-size:14px;float:left!important;margin-bottom: 30px}
+.loginscreen .loginbtn{max-width: 35%!important; bottom: 26px;right: 16px;position: absolute;
+text-transform:none;background: #1c2121;padding: 25px 0px;font-size:16px;color:#fff;opacity:0.40;border:none}
+.logo{width:40%;margin-bottom: 25px}
+.loginscreen .submit-btn ion-icon{position: absolute;left: 15px}

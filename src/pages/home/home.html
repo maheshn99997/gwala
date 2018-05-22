@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="calBg">
+    <angular2-fullcalendar [options]="calendarOptions" (initialized)="onCalendarInit($event)"></angular2-fullcalendar>
+  </div>
+
+  <!-- <div *ngIf="calendarOptions">
+    <ng-fullcalendar #ucCalendar [options]="calendarOptions" (initialized)="onCalendarInit($event)"></ng-fullcalendar>
+  </div> -->
+</ion-content>

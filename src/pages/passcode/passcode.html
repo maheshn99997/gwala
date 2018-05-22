@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>passcode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <button ion-button class="submit-btn" full type="submit" (click)="openPincodeDia()">open pin dialouge</button> -->
+
+  <p *ngIf="isShowEnterText">Please create your four digit pin</p>
+  <p *ngIf="isShowConfirmEnterText">Please confirm your four digit pin</p>
+  <p *ngIf="isPinSet">Please enter your four digit pin</p>
+</ion-content>

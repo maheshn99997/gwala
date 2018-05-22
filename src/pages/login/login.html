@@ -1,0 +1,66 @@
+<ion-content class="background loginscreen">
+  <!-- <button class="prevbtn" full type="submit" (click)="goBack()">
+      <ion-icon name="ios-arrow-back-outline"></ion-icon>
+  </button> -->
+  <ion-slides #loginSlider pager> 
+      
+    <ion-slide>
+      
+      <form [formGroup]="sliderOne">
+        <ion-card> 
+        <ion-card-content class="weltitle">
+              <ion-title><img class="logo" alt="logo" src="assets/icon/logo.png"></ion-title>
+            <p>Welcome to GWALA</p>          
+          <button ion-button class="submit-btn" full type="submit" (click)="loginWithFacebook()">
+              <span class="button-inner">
+                  <ion-icon name="logo-facebook"></ion-icon> Login with facebook
+                </span>
+          </button>
+          <button ion-button class="submit-btn create" full type="submit" (click)="createAccount()">Create your account</button>
+          <!-- <button ion-button full (click)="goToCalendarPage()">More option to login </button> -->
+          <p class="moreop"><a  (click)="moreLogin()">More option to login</a></p>
+          <button ion-button class="submit-btn loginbtn" full type="submit" (click)="login()">Log in</button>
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ion-slide>
+
+    <ion-slide>
+      <form [formGroup]="sliderTwo">
+        <ion-card>
+          <ion-card-content>
+              <ion-title><img class="loginlogo" alt="logo" src="assets/icon/logo.png"></ion-title>
+              <p class="logtitle">Hello, Log in please</p>
+            <form (ngSubmit)="login()" #loginForm="ngForm" >
+            <ion-list inset>
+              <ion-item class="inpt-brdr" >
+                <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="username" required>
+                </ion-input>
+              </ion-item >
+              <ion-item class="inpt-brdr">
+                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+                </ion-input>
+              </ion-item>
+            </ion-list>
+            <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login</button>
+          </form>
+          <a href="">Need help? Forgot your password..</a>
+          </ion-card-content>
+        </ion-card>
+      </form>  
+    </ion-slide>
+
+    <ion-slide>
+      <form [formGroup]="sliderThree">  
+        <ion-card>
+          <ion-card-content>
+          <button ion-button class="submit-btn" full type="submit" (click)="loginWithFacebook()" > <ion-icon name="logo-facebook"></ion-icon>Login with Facebook</button>
+          <button ion-button class="submit-btn" full type="submit" > <ion-icon name="logo-google"></ion-icon>Login with Google</button>
+          <button ion-button class="submit-btn create" full type="submit" (click)="createAccount()">Create your account</button>
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ion-slide>
+  </ion-slides>
+<p class="versionText">Ver. 1.0.0</p>
+</ion-content>
