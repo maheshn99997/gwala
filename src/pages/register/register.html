@@ -1,0 +1,118 @@
+<ion-content class="registercss background" scrollbar-y="true">
+
+    <ion-slides #signupSlider pager>
+  
+        <ion-slide>
+          <button class="prevbtn" full type="submit" (click)="goBack()">
+              <ion-icon name="ios-arrow-back-outline"></ion-icon>
+          </button>
+            
+            <p>Hello, <br>please fill following details to complete registration</p>
+            <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p>
+            <ion-list no-lines>
+         
+                <form [formGroup]="slideOneForm">
+         
+                    <ion-item>
+                        <ion-label floating>First Name</ion-label>
+                        <ion-input formControlName="firstName" type="text" [class.invalid]="!slideOneForm.controls.firstName.valid && (slideOneForm.controls.firstName.dirty || submitAttempt)"></ion-input>
+                    </ion-item>
+         
+                    <ion-item *ngIf="!slideOneForm.controls.firstName.valid  && (slideOneForm.controls.firstName.dirty || submitAttempt)">
+                        <p>Please enter a valid name.</p>
+                    </ion-item>
+         
+                    <ion-item>
+                        <ion-label floating>Last Name</ion-label>
+                        <ion-input formControlName="lastName" type="text" [class.invalid]="!slideOneForm.controls.lastName.valid && (slideOneForm.controls.lastName.dirty || submitAttempt)"></ion-input>
+                    </ion-item>
+         
+                    <ion-item *ngIf="!slideOneForm.controls.lastName.valid  && (slideOneForm.controls.lastName.dirty || submitAttempt)">
+                        <p>Please enter a valid name.</p>
+                    </ion-item>
+         
+                    <ion-item>
+                        <ion-label floating>Phone no.</ion-label>
+                        <ion-input formControlName="phone" type="number" [class.invalid]="!slideOneForm.controls.phone.valid && (slideOneForm.controls.phone.dirty || submitAttempt)"></ion-input>
+                    </ion-item>
+         
+                    <ion-item *ngIf="!slideOneForm.controls.phone.valid  && (slideOneForm.controls.phone.dirty || submitAttempt)">
+                        <p>Please enter a phone no.</p>
+                    </ion-item>
+    
+                    <ion-item>
+                      <ion-label floating>Email id</ion-label>
+                      <ion-input formControlName="email" type="text" [class.invalid]="!slideOneForm.controls.email.valid && (slideOneForm.controls.email.dirty || submitAttempt)"></ion-input>
+                    </ion-item>
+         
+                    <ion-item *ngIf="!slideOneForm.controls.email.valid  && (slideOneForm.controls.email.dirty || submitAttempt)">
+                      <p>Please enter a email id</p>
+                    </ion-item>
+         
+                </form>
+         
+            </ion-list>
+            <!-- <button ion-button class="submit-btn" full type="submit" (click)="next()">Next</button> -->
+            <!-- <button class="nextbtn" full type="submit" (click)="next()">
+              <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+            </button> -->
+            <ion-footer>
+                   <button class="nextbtn" full type="submit" (click)="next()">
+                          <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+                   </button> 
+          </ion-footer>
+        </ion-slide>
+          
+        <ion-slide>
+        
+          <p>Hello,<br>Let us know your complete resindetial address to deliver your order</p>
+          <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p>
+          <ion-list no-lines>
+       
+              <form [formGroup]="slideTwoForm">
+       
+                  <ion-item>
+                      <ion-label floating>Line 1</ion-label>
+                      <ion-input formControlName="addrLine1" type="text" [class.invalid]="!slideTwoForm.controls.addrLine1.valid && (slideTwoForm.controls.addrLine1.dirty || submitAttempt)"></ion-input>
+                  </ion-item>
+       
+                  <ion-item *ngIf="!slideTwoForm.controls.addrLine1.valid  && (slideTwoForm.controls.addrLine1.dirty || submitAttempt)">
+                      <p>Please enter a valid address</p>
+                  </ion-item>
+       
+                  <ion-item>
+                      <ion-label floating>Line 2</ion-label>
+                      <ion-input formControlName="addrLine2" type="text" [class.invalid]="!slideTwoForm.controls.addrLine2.valid && (slideTwoForm.controls.addrLine2.dirty || submitAttempt)"></ion-input>
+                  </ion-item>
+       
+                  <ion-item *ngIf="!slideTwoForm.controls.addrLine2.valid  && (slideTwoForm.controls.addrLine2.dirty || submitAttempt)">
+                      <p>Please enter a valid address</p>
+                  </ion-item>
+       
+                  <ion-item>
+                      <ion-label floating>City</ion-label>
+                      <ion-input formControlName="city" type="text" [class.invalid]="!slideTwoForm.controls.city.valid && (slideTwoForm.controls.city.dirty || submitAttempt)"></ion-input>
+                  </ion-item>
+       
+                  <ion-item *ngIf="!slideTwoForm.controls.city.valid  && (slideTwoForm.controls.city.dirty || submitAttempt)">
+                      <p>Please enter a city</p>
+                  </ion-item>
+  
+                  <ion-item>
+                    <ion-label floating>Pincode</ion-label>
+                    <ion-input formControlName="pincode" type="number" [class.invalid]="!slideTwoForm.controls.pincode.valid && (slideTwoForm.controls.pincode.dirty || submitAttempt)"></ion-input>
+                  </ion-item>
+       
+                  <ion-item *ngIf="!slideTwoForm.controls.pincode.valid  && (slideTwoForm.controls.pincode.dirty || submitAttempt)">
+                    <p>Please enter a pincode</p>
+                  </ion-item>
+       
+              </form>
+       
+          </ion-list>
+          <button ion-button class="submit-btn" full type="submit" (click)="save()">Save</button>
+      </ion-slide>
+    </ion-slides>
+  
+  </ion-content>
+  

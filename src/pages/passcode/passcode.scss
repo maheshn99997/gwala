@@ -1,0 +1,18 @@
+page-passcode {
+    .background{
+        // background: url('../assets/bg.png') no-repeat center center fixed;
+        // background-size: cover;
+        background-color: #005498;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+   }
+   ion-pincode .pincode-input .pincode-input-grid{border: none!important}
+   ion-pincode .pincode-input .pincode-input-row ion-col{border-left:none!important;border-bottom:solid 1px #fff;margin: 0 10px}
+   ion-pincode .pincode-input .pincode-input-row ion-col span.obscured{background-color:none!important;width:0.5em!important;height:0.5em!important}
+ 
+   .passcode  p{color:#fff;font-size: 20px;text-align: left;font-weight: 300;line-height:30px}
+ 
+   ion-pincode .pincode-wrapper{height:70%!important;border-top:none!important;background-color:#005498!important}

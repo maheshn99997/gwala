@@ -1,0 +1,23 @@
+page-register {
+    .registercss ion-slide{padding: 0 15px}
+    .background{
+        // background: url('../assets/bg.png') no-repeat center center fixed;
+        // background-size: cover;
+        background-color: #005498;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+    }
+    
+    .registercss .item-md{background:none!important}
+    .registercss .item-inner{border-bottom:solid 1px #fff!important;}
+    .registercss .slide-zoom p{color:#fff;font-size: 20px;text-align: left;font-weight: 300;line-height:30px}
+    .registercss .label-md[floating]{font-size: 14px;color:#fff}
+    .registercss form .item-md{padding-left: 0!important;}
+    .registercss .nextbtn{position: absolute;font-size: 20px;right:10px;bottom: 15px;width:50px;height:50px;border-radius: 50%;font-size:25px;color:#fff;background: #1c2121;opacity:0.40 }
+    .registercss .prevbtn{position: absolute;font-size: 20px;left:10px;top: 15px;width:50px;height:50px;border-radius: 50%;font-size:25px;color:#fff;background: #1c2121;opacity:0.40 }
+    .registercss .scroll-content{padding-bottom:0!important}
+    .registercss .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner{box-shadow:none;}
+}
